@@ -7,8 +7,8 @@
 --   To use any of the example code shown below, uncomment the lines and modify as necessary
 --
 
-library IEEE;
-use IEEE.STD_LOGIC_1164.all;
+library ieee;
+use ieee.std_logic_1164.all;
 
 package Operations is
 	constant add:		 std_logic_vector (4 downto 0) := "00000";
