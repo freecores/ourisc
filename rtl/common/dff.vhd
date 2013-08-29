@@ -1,47 +1,44 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date:    01:14:05 05/02/2012 
--- Design Name: 
--- Module Name:    DFF - FlipFlop 
--- Project Name: 
--- Target Devices: 
--- Tool versions: 
--- Description: 
---
--- Dependencies: 
---
+-- Engineer: Joao Carlos Nunes Bittencourt
+----------------------------------------------------------------------------------
+-- Create Date:    13:18:18 03/06/2012 
+----------------------------------------------------------------------------------
+-- Design Name:    D-Flip-flop
+-- Module Name:    dff - behavioral 
+----------------------------------------------------------------------------------
+-- Project Name:   16-bit uRISC Processor
+----------------------------------------------------------------------------------
 -- Revision: 
--- Revision 0.01 - File Created
--- Additional Comments: 
+-- 	1.0 - File Created
+-- 	2.0 - Project refactoring
 --
 ----------------------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
 
 entity dff is
-	Generic (WIDTH : integer := 16);
-    Port ( clk : in std_logic;
-           en : in std_logic;
-           rst_n : in std_logic;
-           D : in std_logic_vector (WIDTH-1 downto 0);
-           Q : out std_logic_vector (WIDTH-1 downto 0));
+	generic( WIDTH : integer := 16 );
+    port ( clk 		: in std_logic;
+           enable 	: in std_logic;
+           rst_n 	: in std_logic;
+           sink_d 	: in std_logic_vector (WIDTH-1 downto 0);
+           src_q 	: out std_logic_vector (WIDTH-1 downto 0)
+    );
 end dff;
 
-architecture FlipFlop of dff is
+architecture behavioral of dff is
 
 begin
 	process (clock,reset)
 	begin
 		if(reset = '0') then
-			Q <= (others => '0');
+			src_q <= (others => '0');
 		elsif clock'event and clock = '1' then
 			if(enable = '1') then
-				Q <= D;
+				src_q <= sink_d;
 			end if;	
 		end if;
 	end process;
 
-end FlipFlop;
+end behavioral;
 

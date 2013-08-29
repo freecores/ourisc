@@ -1,20 +1,16 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date:    21:48:33 04/18/2012 
--- Design Name: 
--- Module Name:    adder - Behavioral 
--- Project Name: 
--- Target Devices: 
--- Tool versions: 
--- Description: 
---
--- Dependencies: 
---
+-- Engineer: Joao Carlos Nunes Bittencourt
+----------------------------------------------------------------------------------
+-- Create Date:    13:18:18 03/06/2012 
+----------------------------------------------------------------------------------
+-- Design Name:    Adder Macrofunction
+-- Module Name:    adder - behavioral 
+----------------------------------------------------------------------------------
+-- Project Name:   16-bit uRISC Processor
+----------------------------------------------------------------------------------
 -- Revision: 
--- Revision 0.01 - File Created
--- Additional Comments: 
+-- 	1.0 - File Created
+-- 	2.0 - Project refactoring
 --
 ----------------------------------------------------------------------------------
 library ieee;
@@ -26,19 +22,19 @@ entity adder is
 	Generic (
 		WIDTH : integer := 16 );
     Port ( 
-    	data_a : in std_logic_vector (WIDTH-1 downto 0);
-        data_b : in std_logic_vector (WIDTH-1 downto 0);
-        result : out std_logic_vector (WIDTH-1 downto 0) );
+    	sink_a   : in std_logic_vector (WIDTH-1 downto 0);
+        sink_b   : in std_logic_vector (WIDTH-1 downto 0);
+        src_data : out std_logic_vector (WIDTH-1 downto 0) );
 end adder;
 
-architecture Macrofunction of adder is	
+architecture behavioral of adder is	
 begin
-	process(data_a, data_b)
-		variable mAux : std_logic_vector(WIDTH-1 downto 0) := conv_std_logic_vector(0,WIDTH);
+	process(sink_a, sink_b)
+		variable aux : std_logic_vector(WIDTH-1 downto 0) := conv_std_logic_vector(0,WIDTH);
 	begin
-		mAux := data_a + data_b;
-		result <= mAux;
+		aux := sink_a + sink_b;
+		src_data <= aux;
 	end process;
 
-end Macrofunction;
+end behavioral;
 
