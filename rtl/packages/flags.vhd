@@ -1,12 +1,18 @@
+----------------------------------------------------------------------------------
+-- Engineer: Joao Carlos Nunes Bittencourt
+----------------------------------------------------------------------------------
+-- Create Date:    13:18:18 03/06/2012 
+----------------------------------------------------------------------------------
+-- Design Name:    Flags Package
+-- Package Name:   flags
+----------------------------------------------------------------------------------
+-- Project Name:   16-bit uRISC Processor
+----------------------------------------------------------------------------------
+-- Revision: 
+-- 	1.0 - File Created
+-- 	2.0 - Project refactoring
 --
---	Package File Template
---
---	Purpose: This package defines supplemental types, subtypes, 
---		 constants, and functions 
---
---   To use any of the example code shown below, uncomment the lines and modify as necessary
---
-
+----------------------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
 

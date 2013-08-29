@@ -1,16 +1,22 @@
+----------------------------------------------------------------------------------
+-- Engineer: Joao Carlos Nunes Bittencourt
+----------------------------------------------------------------------------------
+-- Create Date:    13:18:18 03/06/2012 
+----------------------------------------------------------------------------------
+-- Design Name:    Opcode Package
+-- Package Name:   flags
+----------------------------------------------------------------------------------
+-- Project Name:   16-bit uRISC Processor
+----------------------------------------------------------------------------------
+-- Revision: 
+-- 	1.0 - File Created
+-- 	2.0 - Project refactoring
 --
---	Package File Template
---
---	Purpose: This package defines supplemental types, subtypes, 
---		 constants, and functions 
---
---   To use any of the example code shown below, uncomment the lines and modify as necessary
---
-
+----------------------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
 
-package Operations is
+package operations is
 	constant add:		 std_logic_vector (4 downto 0) := "00000";
 	constant addinc:	 std_logic_vector (4 downto 0) := "00001";
 	constant inca: 		 std_logic_vector (4 downto 0) := "00011";
@@ -37,4 +43,4 @@ package Operations is
 	constant ones:  	 std_logic_vector (4 downto 0) := "11111";
 	constant lcl:   	 std_logic_vector (4 downto 0) := "00010"; -- Load constant low
 	constant lch:   	 std_logic_vector (4 downto 0) := "00111"; -- Load constant high
-end Operations;
+end operations;
