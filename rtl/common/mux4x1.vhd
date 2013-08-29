@@ -1,20 +1,16 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date:    15:02:04 04/19/2012 
--- Design Name:    Multiplexer 3 x 1
--- Module Name:    mux4x1 - Multiplex 
--- Project Name: 
--- Target Devices: 
--- Tool versions: 
--- Description: 
---
--- Dependencies: 
---
+-- Engineer: Joao Carlos Nunes Bittencourt
+----------------------------------------------------------------------------------
+-- Create Date:    13:18:18 03/06/2012 
+----------------------------------------------------------------------------------
+-- Design Name:    4x1 Multiplexer
+-- Module Name:    mux4x1 - behavioral 
+----------------------------------------------------------------------------------
+-- Project Name:   16-bit uRISC Processor
+----------------------------------------------------------------------------------
 -- Revision: 
--- Revision 0.01 - File Created
--- Additional Comments: 
+-- 	1.0 - File Created
+-- 	2.0 - Project refactoring
 --
 ----------------------------------------------------------------------------------
 library ieee;
